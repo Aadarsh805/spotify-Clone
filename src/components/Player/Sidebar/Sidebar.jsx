@@ -1,7 +1,8 @@
+import React from 'react'
 
-function Sidebar() {
+const Sidebar = () => {
   return (
-    <div >sidebar...</div>
+    <div>Sidebar</div>
   )
 }
 
