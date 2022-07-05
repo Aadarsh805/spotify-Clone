@@ -3,7 +3,7 @@ import Body from "./Body/Body";
 import Footer from './Footer/Footer'
 import './Player.css'
 
-const Player = () => {
+const Player = ({spotify}) => {
   return (
     <div className="player">
       <div className="player__body">
