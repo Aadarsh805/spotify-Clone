@@ -21,7 +21,7 @@ export const getTokenFromUrl = () => {
 
         return acc;
      },{})
-}
+} 
 
 export const loginUrl = `${authEndPoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
   "%20"
