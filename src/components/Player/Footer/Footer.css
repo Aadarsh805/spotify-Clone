@@ -2,8 +2,55 @@
     position: fixed;
     bottom: 0;
     height: 65px;
-    width: 100%;
+    width: 95%;
     background-color: #282828;
     color: #fff;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__left {
+    flex: .3;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.footer__left > img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.footer__songInfo h4{
+    margin-bottom: 5px;
+}
+
+.footer__songInfo p{
+    font-size: 14px;
+}
+
+.footer__icon:hover{
+    transition: transform .2s ease-in-out;
+    transform: scale(1.2);
+}
+
+.footer__center {
+    flex: .4;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    max-width: 300px;
+}
+
+.footer__right {
+    flex: .3;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
