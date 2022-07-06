@@ -9,8 +9,7 @@ import { useStateValue } from "./StateProvider";
 const spotify = new SpotifyWebApi();
 
 function App() {
-  const [{ user, token }, dispatch] = useStateValue();
-
+  const [{ discover_weekly, user, token }, dispatch] = useStateValue();
   useEffect(() => {
     const hash = getTokenFromUrl();
     window.location.hash = "";
@@ -35,6 +34,12 @@ function App() {
         dispatch({
           type: "SET_PLAYLISTS",
           playlists: playlists,
+        })
+      })
+      spotify.getPlaylist("3cemJvlkE3tUG2za9DYjVj").then(response => {
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          discover_weekly: response,
         })
       })
 
