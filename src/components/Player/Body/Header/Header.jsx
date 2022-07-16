@@ -3,6 +3,8 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Avatar } from "@mui/material";
 import "./Header.css";
 import { useStateValue } from "../../../../StateProvider";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+
 const Header = ({ spotify }) => {
   const [{ user }, dispatch] = useStateValue();
   return (
@@ -13,8 +15,13 @@ const Header = ({ spotify }) => {
       </div>
 
       <div className="header__user">
-        <Avatar src={user?.images[0]?.url} alt="user" />
-        <h4>{user?.display_name}</h4>
+        <Avatar
+          src={user?.images[0]?.url}
+          alt="user"
+          sx={{ width: 30, height: 30 }}
+        />
+        <h4>{user?.display_name.substring(0,user?.display_name.indexOf(" "))}</h4>
+        <ArrowDropDownIcon />
       </div>
     </div>
   );
